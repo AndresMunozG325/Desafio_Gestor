@@ -1,3 +1,3 @@
 class Project < ApplicationRecord
-    validates :nombre, :descripcion, :fecha_inicio, :fecha_termino, :estado, presence: true
+    validates :nombre, :descripcion, :estado, presence: true
 end

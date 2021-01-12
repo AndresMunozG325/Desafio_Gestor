@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  http_basic_authenticate_with name: "desafiovamoscontodo", password: "XAHTJEAS23123%23", only: :dashboard
   def projects
   end
 
@@ -6,8 +7,6 @@ class ProjectsController < ApplicationController
     @projects = Project.all.order(created_at: :asc)
     if params[:estado].present?
       @projects = Project.where('estado = ?', params[:estado]) 
-    #else
-      #@projects = Project.find_valid 
     end
   end
   
