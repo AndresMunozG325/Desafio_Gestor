@@ -1,0 +1,37 @@
+<h1>Listado de Proyectos</h1>
+
+<h2>Filtra por Estado de Proyecto</h2>
+
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Indicar Estado de proyecto" aria-label="Search" name="estado">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<table class="table table-striped"
+    <thead>
+        <tr>
+            <th scope="col"> ID </th>
+            <th scope="col"> Nombre </th>
+            <th scope="col"> Descripción </th>
+            <th scope="col"> Fecha de Inicio </th>
+            <th scope="col"> Fecha de Término </th>
+            <th scope="col"> Estado </th>
+        </tr>
+    </thead>
+    <% @projects.each do |project|%>
+        <tbody>
+            <tr>
+                <th scope="row"><%= project.id %></th>
+                <td> <%= project.nombre %> </td>
+                <td> <%= project.descripcion %> </td>
+                <td> <%= project.fecha_inicio %> </td>
+                <td> <%= project.fecha_termino %> </td>
+                <td> <%= project.estado %> </td>
+            </tr>
+        </tbody>
+    <%end%>       
+</table>

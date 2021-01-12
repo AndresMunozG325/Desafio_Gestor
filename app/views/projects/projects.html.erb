@@ -1,0 +1,32 @@
+<h1>Crear Proyecto</h1>
+<form id="create_projects" method="get" action="<%= projects_create_path%>">
+    <div class="mb-3">
+        <label for="form_nombre" class="form-label">Nombre</label>
+        <input name="nombre" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="form_descripcion" class="form-label">Descripción</label>
+        <input name="descripcion" class="form-control" type="textarea">
+    </div>
+    <div class="mb-3">
+        <label for="form_inicio">Fecha de Inicio</label>
+        <input type="date" name="fecha_inicio" value="2021-01-12">
+    </div>
+    <div class="mb-3">
+        <label for="form_termino">Fecha de Término</label>
+        <input type="date" name="fecha_termino" value="2021-01-13">
+    </div>
+
+    <div class="mb-3">
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="form_estado">Estado</label>
+            <select class="form-select" name="estado">
+                <option selected>Propuesta</option>
+                <option>En Progreso</option>
+                <option>Terminado</option>
+            </select>
+        </div>
+    </div>
+    
+    <input class="btn btn-primary" type="submit" value="Enviar">
+</form>
